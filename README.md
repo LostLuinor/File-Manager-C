@@ -18,8 +18,9 @@ This File Manager is a C-based command-line tool designed for efficiently managi
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/File-Manager-C.git
+   git clone https://github.com/LostLuinor/File-Manager-C.git
    cd File-Manager-C
+   
    ```
 2. Compile the source code:
    ```bash
@@ -29,7 +30,7 @@ This File Manager is a C-based command-line tool designed for efficiently managi
    ```bash
    ./fileManager
    ```
-
+   
 ## Usage
 1. Launch the program (`./fileManager`).
 2. Enter the working directory when prompted or confirm the current directory.

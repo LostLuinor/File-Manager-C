@@ -45,19 +45,37 @@ Your working directory: /home/user/documents
 1. cat.jpg
 2. filemgr.c
 3. document.txt
-[R]EN [O]PEN [E]NAME [M]OVE [D]ELETE [S]ORTING [F]ILTER [I]NFO [E]NCRYPT [D]ECRYPT [Z]IP [C]REATE
+[I]NFO [O]PEN [R]ENAME [M]OVE [D]ELETE [S]ORTING [F]ILTER FI[N]D [E]NCRYPT [D]ECRYPT [Z]IP CRE[A]TE [U]NZIP [H]IDE 
 Just enter the index against the functions: D
 Which file: Please enter number shown against files to delete: 1
 Deleting...
 The file has been successfully deleted.
 ```
+
 ## Key Functions
-- `ClearScreen()`: Clears the terminal screen using the `clear` command.
-- `GetDir()`: Reads and stores file names in the specified directory.
-- `WorkingDir()`: Prompts the user to confirm or change the working directory.
-- `SortFiles()`: Sorts files alphabetically or by size.
-- `EncryptFile()` / `DecryptFile()`: Encrypts or decrypts text files.
-- `Create()`: Creates new files or folders.
+- `Intro()`: Displays a welcome message for the File Manager with a green-colored title and calls `Functions()` to show available operations.
+- `GetDir()`: Reads and stores file names in the specified directory, excluding `"."` and `".."`, up to a maximum of 500 files.
+- `WorkingDir()`: Prompts the user to confirm or change the working directory, then loads its contents using `GetDir()`.
+- `PickFeature()`: Allows the user to select a file operation by entering a highlighted letter.
+- `DelFile()`: Deletes a specified file from the current directory after user confirmation.
+- `SearchFile()`: Searches for files in the directory using regular expression pattern matching.
+- `SortFiles()`: Sorts files alphabetically or by size based on user preference.
+- `FilterFile()`: Filters files based on user-defined criteria using regular expressions.
+- `OpenFile(int n)`: Opens the file at index `n` with the system's default application or text editor.
+- `RenameFile(int n)`: Renames the file at index `n` using a new name provided by the user.
+- `MoveFile(int n)`: Moves the file at index `n` to a user-specified destination directory.
+- `FileInfo(int n)`: Displays detailed information such as size and permissions for the file at index `n`.
+- `EncryptFile()` / `DecryptFile()`: Encrypts or decrypts text files, limited to those editable by a text editor.
+- `ZipFile()`: Compresses a file into a zip archive for storage or transfer.
+- `UnzipFile()`: Extracts files from a zip archive in the current directory.
+- `HideFile()`: Hides a file by embedding it within an image for added security.
+- `FileSize(int n)`: Returns the size of the file at index `n` in bytes.
+- `Create()`: Creates new files or folders in the current directory based on user input.
+- `ClearScreen()`: Clears the terminal screen using the system's clear command.
+- `EnterToContinue()`: Waits for the user to press a key to continue execution.
+- `LowerToUpper(char *s)`: Converts a string to uppercase for case-insensitive input handling.
+- `ShowFilesInDir()`: Displays a numbered list of files in the current directory for selection.
+- `Functions()`: Prints a menu of available file operations with highlighted letters for user selection.
 
 ## Limitations
 - Cannot access directories above the File Manager’s location.

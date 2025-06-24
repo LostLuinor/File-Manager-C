@@ -23,15 +23,15 @@ This File Manager is a C-based command-line tool designed for efficiently managi
    ```
 2. Compile the source code:
    ```bash
-   gcc filemgr.c -o filemgr
+   gcc fileManager.c -o fileManager
    ```
 3. Run the program:
    ```bash
-   ./filemgr
+   ./fileManager
    ```
 
 ## Usage
-1. Launch the program (`./filemgr`).
+1. Launch the program (`./fileManager`).
 2. Enter the working directory when prompted or confirm the current directory.
 3. Choose a function by entering the highlighted letter (e.g., `O` for Open, `D` for Delete).
 4. Follow the prompts to perform operations like creating files/folders, sorting, or encrypting files.
@@ -39,11 +39,11 @@ This File Manager is a C-based command-line tool designed for efficiently managi
 
 ### Example
 ```bash
-$ ./filemgr
+$ ./fileManager
 Which directory do you want me to work on? /home/user/documents
 Your working directory: /home/user/documents
 1. cat.jpg
-2. filemgr.c
+2. fileManager.c
 3. document.txt
 [I]NFO [O]PEN [R]ENAME [M]OVE [D]ELETE [S]ORTING [F]ILTER FI[N]D [E]NCRYPT [D]ECRYPT [Z]IP CRE[A]TE [U]NZIP [H]IDE 
 Just enter the index against the functions: D
@@ -51,9 +51,6 @@ Which file: Please enter number shown against files to delete: 1
 Deleting...
 The file has been successfully deleted.
 ```
-
-![OutputScreen](outputScreen.png)
-
 ## Key Functions
 - `Intro()`: Displays a welcome message for the File Manager with a green-colored title and calls `Functions()` to show available operations.
 - `GetDir()`: Reads and stores file names in the specified directory, excluding `"."` and `".."`, up to a maximum of 500 files.
@@ -103,6 +100,3 @@ The project was tested for key functionalities:
 - [Stack Overflow](https://stackoverflow.com/)
 - [POSIX dirent.h](https://pubs.opengroup.org/onlinepubs/7998799/xsh/dirent.h.html)
 - [Code for Win](https://codeforwin.org/c-programming/)
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

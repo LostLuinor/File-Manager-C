@@ -52,6 +52,8 @@ Deleting...
 The file has been successfully deleted.
 ```
 
+![OutputScreen](outputScreen.png)
+
 ## Key Functions
 - `Intro()`: Displays a welcome message for the File Manager with a green-colored title and calls `Functions()` to show available operations.
 - `GetDir()`: Reads and stores file names in the specified directory, excluding `"."` and `".."`, up to a maximum of 500 files.
